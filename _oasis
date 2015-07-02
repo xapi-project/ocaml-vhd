@@ -41,6 +41,14 @@ Executable parse_test
   Install:            false
   BuildDepends:       lwt, lwt.unix, vhd-format, vhd-format.lwt, cstruct, oUnit, io-page.unix
 
+Executable get_vhd_vsize
+  CompiledObject:     best
+  Path:               lib_test
+  MainIs:             get_vhd_vsize.ml
+  Custom:             true
+  Install:            true
+  BuildDepends:       lwt, lwt.unix, vhd-format, vhd-format.lwt, cstruct, io-page.unix
+
 Test parse_test
   Command:            ./parse_test.native
   Run:                true

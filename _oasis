@@ -1,6 +1,6 @@
 OASISFormat: 0.3
 Name:        vhd-format
-Version:     0.7.2
+Version:     0.7.3
 Synopsis:    .vhd file manipulation
 Authors:     Jonathan Ludlam and David Scott
 License:     LGPL-2.1 with OCaml linking exception
@@ -40,6 +40,14 @@ Executable parse_test
   Custom:             true
   Install:            false
   BuildDepends:       lwt, lwt.unix, vhd-format, vhd-format.lwt, cstruct, oUnit, io-page.unix
+
+Executable get_vhd_vsize
+  CompiledObject:     best
+  Path:               lib_test
+  MainIs:             get_vhd_vsize.ml
+  Custom:             true
+  Install:            true
+  BuildDepends:       lwt, lwt.unix, vhd-format, vhd-format.lwt, cstruct, io-page.unix
 
 Test parse_test
   Command:            ./parse_test.native
